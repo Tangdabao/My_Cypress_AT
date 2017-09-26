@@ -30,11 +30,16 @@ void AT_init(void)
     UART_AT_Start();
     UART_AT_SCB_IRQ_Start();
     UART_AT_UartPutString("Test for AT");
+  #if 0
+    LED(R,OFF);
+    LED(G,OFF);
+    LED(B,OFF);
+  #else 
     LED_OFF(R);
     LED_OFF(G);
     LED_OFF(B);
+   #endif
     //CyDelay(1000u);
- 
   }
 
 
@@ -72,4 +77,6 @@ CY_ISR(UART_AT_SCB_IRQ_Interrupt)
     UART_AT_SpiUartClearRxBuffer();  
     /* `#END` */
 }
+  
+
 

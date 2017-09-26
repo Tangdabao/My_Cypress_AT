@@ -60,7 +60,7 @@ Discarded input sections
  .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\LED.o
  .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\LED.o
  .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\LED.o
- .text.LED      0x00000000       0x7c .\CortexM0\ARM_GCC_493\Debug\LED.o
+ .text.LED      0x00000000       0x50 .\CortexM0\ARM_GCC_493\Debug\LED.o
  .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
  .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
  .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
@@ -900,24 +900,24 @@ END GROUP
  .debug_abbrev  0x00000e6d       0x14 .\CortexM0\ARM_GCC_493\Debug\My_AT_Branch1.a(CyBootAsmGnu.o)
  .debug_abbrev  0x00000e81       0x70 .\CortexM0\ARM_GCC_493\Debug\My_AT_Branch1.a(UART_AT_SPI_UART_INT.o)
 
-.debug_line     0x00000000     0x1ab6
+.debug_line     0x00000000     0x1aad
  *(.debug_line)
  .debug_line    0x00000000      0x186 .\CortexM0\ARM_GCC_493\Debug\main.o
- .debug_line    0x00000186      0x179 .\CortexM0\ARM_GCC_493\Debug\LED.o
- .debug_line    0x000002ff       0x51 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
- .debug_line    0x00000350      0x1d0 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
- .debug_line    0x00000520      0x179 .\CortexM0\ARM_GCC_493\Debug\My_AT_Branch1.a(cyfitter_cfg.o)
- .debug_line    0x00000699       0xbd .\CortexM0\ARM_GCC_493\Debug\My_AT_Branch1.a(LED_1.o)
- .debug_line    0x00000756       0xbd .\CortexM0\ARM_GCC_493\Debug\My_AT_Branch1.a(LED_2.o)
- .debug_line    0x00000813      0x4db .\CortexM0\ARM_GCC_493\Debug\My_AT_Branch1.a(CyLib.o)
- .debug_line    0x00000cee      0x6ec .\CortexM0\ARM_GCC_493\Debug\My_AT_Branch1.a(CyLFClk.o)
- .debug_line    0x000013da       0xbd .\CortexM0\ARM_GCC_493\Debug\My_AT_Branch1.a(LED_3.o)
- .debug_line    0x00001497      0x11d .\CortexM0\ARM_GCC_493\Debug\My_AT_Branch1.a(UART_AT.o)
- .debug_line    0x000015b4      0x126 .\CortexM0\ARM_GCC_493\Debug\My_AT_Branch1.a(UART_AT_SPI_UART.o)
- .debug_line    0x000016da      0x1a6 .\CortexM0\ARM_GCC_493\Debug\My_AT_Branch1.a(UART_AT_UART.o)
- .debug_line    0x00001880      0x14b .\CortexM0\ARM_GCC_493\Debug\My_AT_Branch1.a(UART_AT_SCB_IRQ.o)
- .debug_line    0x000019cb       0x68 .\CortexM0\ARM_GCC_493\Debug\My_AT_Branch1.a(CyBootAsmGnu.o)
- .debug_line    0x00001a33       0x83 .\CortexM0\ARM_GCC_493\Debug\My_AT_Branch1.a(UART_AT_SPI_UART_INT.o)
+ .debug_line    0x00000186      0x170 .\CortexM0\ARM_GCC_493\Debug\LED.o
+ .debug_line    0x000002f6       0x51 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+ .debug_line    0x00000347      0x1d0 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .debug_line    0x00000517      0x179 .\CortexM0\ARM_GCC_493\Debug\My_AT_Branch1.a(cyfitter_cfg.o)
+ .debug_line    0x00000690       0xbd .\CortexM0\ARM_GCC_493\Debug\My_AT_Branch1.a(LED_1.o)
+ .debug_line    0x0000074d       0xbd .\CortexM0\ARM_GCC_493\Debug\My_AT_Branch1.a(LED_2.o)
+ .debug_line    0x0000080a      0x4db .\CortexM0\ARM_GCC_493\Debug\My_AT_Branch1.a(CyLib.o)
+ .debug_line    0x00000ce5      0x6ec .\CortexM0\ARM_GCC_493\Debug\My_AT_Branch1.a(CyLFClk.o)
+ .debug_line    0x000013d1       0xbd .\CortexM0\ARM_GCC_493\Debug\My_AT_Branch1.a(LED_3.o)
+ .debug_line    0x0000148e      0x11d .\CortexM0\ARM_GCC_493\Debug\My_AT_Branch1.a(UART_AT.o)
+ .debug_line    0x000015ab      0x126 .\CortexM0\ARM_GCC_493\Debug\My_AT_Branch1.a(UART_AT_SPI_UART.o)
+ .debug_line    0x000016d1      0x1a6 .\CortexM0\ARM_GCC_493\Debug\My_AT_Branch1.a(UART_AT_UART.o)
+ .debug_line    0x00001877      0x14b .\CortexM0\ARM_GCC_493\Debug\My_AT_Branch1.a(UART_AT_SCB_IRQ.o)
+ .debug_line    0x000019c2       0x68 .\CortexM0\ARM_GCC_493\Debug\My_AT_Branch1.a(CyBootAsmGnu.o)
+ .debug_line    0x00001a2a       0x83 .\CortexM0\ARM_GCC_493\Debug\My_AT_Branch1.a(UART_AT_SPI_UART_INT.o)
 
 .debug_frame    0x00000000     0x17b0
  *(.debug_frame)
