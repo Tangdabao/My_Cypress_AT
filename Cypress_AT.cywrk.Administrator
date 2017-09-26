@@ -83,15 +83,12 @@
 <v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\UART_AT\UART_AT_SPI_UART_PVT.h</v>
 <v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\UART_AT\UART_AT_UART.c</v>
 <v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\UART_AT\UART_AT_UART_BOOT.c</v>
-<v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\UART_AT_rx</v>
 <v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\UART_AT_rx\UART_AT_rx.c</v>
 <v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\UART_AT_rx\UART_AT_rx.h</v>
 <v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\UART_AT_rx\UART_AT_rx_aliases.h</v>
 <v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\UART_AT_rx\UART_AT_rx_PM.c</v>
-<v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\UART_AT_SCB_IRQ</v>
 <v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\UART_AT_SCB_IRQ\UART_AT_SCB_IRQ.c</v>
 <v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\UART_AT_SCB_IRQ\UART_AT_SCB_IRQ.h</v>
-<v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\UART_AT_SCBCLK</v>
 <v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\UART_AT_SCBCLK\UART_AT_SCBCLK.c</v>
 <v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\UART_AT_SCBCLK\UART_AT_SCBCLK.h</v>
 <v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\UART_AT_tx\UART_AT_tx.c</v>
@@ -116,6 +113,9 @@
 <v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\project.h</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
+<v>Cypress_AT</v>
+<v>Cypress_AT\My_AT_Branch1</v>
+<v>Cypress_AT\My_AT_Branch1\TopDesign</v>
 <v>Cypress_AT\My_AT_Branch1\My_AT_Branch1.cydwr</v>
 <v>Cypress_AT\My_AT_Branch1\My_AT_Branch1.cydwr\Pins</v>
 <v>Cypress_AT\My_AT_Branch1\My_AT_Branch1.cydwr\Analog</v>
@@ -139,16 +139,8 @@
 <v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\LED_3</v>
 <v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\UART_AT</v>
 <v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\UART_AT_rx</v>
-<v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\UART_AT_rx\UART_AT_rx.c</v>
-<v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\UART_AT_rx\UART_AT_rx.h</v>
-<v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\UART_AT_rx\UART_AT_rx_aliases.h</v>
-<v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\UART_AT_rx\UART_AT_rx_PM.c</v>
 <v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\UART_AT_SCB_IRQ</v>
-<v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\UART_AT_SCB_IRQ\UART_AT_SCB_IRQ.c</v>
-<v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\UART_AT_SCB_IRQ\UART_AT_SCB_IRQ.h</v>
 <v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\UART_AT_SCBCLK</v>
-<v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\UART_AT_SCBCLK\UART_AT_SCBCLK.c</v>
-<v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\UART_AT_SCBCLK\UART_AT_SCBCLK.h</v>
 <v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\UART_AT_tx</v>
 <v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\cycodeshareexport.ld</v>
 <v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\cycodeshareimport.ld</v>
@@ -163,6 +155,9 @@
 <v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\cyfitter_cfg.h</v>
 <v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\cyfittergnu.inc</v>
 <v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\cyfitteriar.inc</v>
+<v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\cyfitterrv.inc</v>
+<v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\cymetadata.c</v>
+<v>Cypress_AT\My_AT_Branch1\Generated_Source\PSoC4\project.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -314,15 +309,6 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\My_AT_Branch1.cydsn\main.c" />
-<name v=".\My_AT_Branch1.cydsn\LED.c" />
-<name v=".\My_AT_Branch1.cydsn\LED.h" />
-<name v=".\My_AT_Branch1.cydsn\Generated_Source\PSoC4\LED_1_PM.c" />
-<name v=".\My_AT_Branch1.cydsn\Generated_Source\PSoC4\LED_1.h" />
-<name v=".\My_AT_Branch1.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\My_AT_Branch1.cydsn\My_AT_Branch1.cydwr" />
-<name v=".\My_AT_Branch1.cydsn\Generated_Source\PSoC4\UART_AT_SCB_IRQ.h" />
-<name v=".\My_AT_Branch1.cydsn\Generated_Source\PSoC4\UART_AT_SCB_IRQ.c" />
-<name v=".\My_AT_Branch1.cydsn\cyapicallbacks.h" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -330,7 +316,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1300, 627" SelectedTabbedMdiWindow="39b04960-eac8-483d-b4e8-173cbfdf2023"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="fe21a5a1-40eb-4ddf-89d5-c2ffbbe34bf2" /><DocumentWindow Key="11af16d7-c9b5-4773-9c8f-59fd1aa50510" Guid="39b04960-eac8-483d-b4e8-173cbfdf2023" /><DocumentWindow Key="78b67bd9-f2fd-4e0f-9b57-39c25a9f2cf5" Guid="7b01851b-0454-40b2-9921-9fbf7ae71baf" /><DocumentWindow Key="0d06b418-3406-4b0b-ab64-cb6a03f1f67f" Guid="9c0414dd-ce90-4abc-8be3-460c6eb3278a" /><DocumentWindow Key="b0313d06-80f1-412a-a5bf-892f054c50d9" Guid="0f1298c7-a64b-4e39-846b-d0b5184cd77c" /><DocumentWindow Key="7d260c66-45c5-49eb-a891-3f16ec4357fe" Guid="495f4436-c5b0-4c8e-8c30-41693f737902" /><DocumentWindow Key="c053de77-0255-4527-94da-899bf13404f1" Guid="b661b400-5841-4802-8e53-fd2848a586b8" /><DocumentWindow Key="359993f1-c41e-4e14-8a31-afc4216b9923" Guid="47792c8d-c506-4f0c-9d5c-d21d6b392c83" /><DocumentWindow Key="caa7467e-5ee0-4af6-8ccf-e544458a99b6" Guid="c3dfb94c-95ac-4ef2-96c8-b16eed342202" /><DocumentWindow Key="b33775ef-d80e-405e-9f49-068f966b8b0c" Guid="00f0ed26-343a-4cda-9dc1-678a8eeeb233" /><DocumentWindow Key="36147723-4074-495f-b2fb-a553f8acf54c" Guid="caeb2ba9-cd74-4212-81de-d8fca2279541" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1300, 627" SelectedTabbedMdiWindow="edf6439c-dea4-41c9-b54b-4abb4e31ac0d"><DocumentWindow Key="0bbbdc55-137f-4c32-8cf9-c6cf734aee8d" Guid="edf6439c-dea4-41c9-b54b-4abb4e31ac0d" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

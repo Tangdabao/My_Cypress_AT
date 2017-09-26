@@ -10,7 +10,7 @@
 #define OFF 1
     
 void LED_ON(int16_t color);
-void LED_Off(int16_t color);
+void LED_OFF(int16_t color);
 void LED(int16_t color,int8_t power);
 
 #endif

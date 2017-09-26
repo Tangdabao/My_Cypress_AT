@@ -30,9 +30,9 @@ void AT_init(void)
     UART_AT_Start();
     UART_AT_SCB_IRQ_Start();
     UART_AT_UartPutString("Test for AT");
-    LED(R,OFF);
-    LED(G,OFF);
-    LED(B,OFF);
+    LED_OFF(R);
+    LED_OFF(G);
+    LED_OFF(B);
     //CyDelay(1000u);
  
   }

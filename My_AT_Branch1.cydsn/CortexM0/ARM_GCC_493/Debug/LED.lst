@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 1
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cc51aZ2O.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 1
    7:LED.c         ****   {
    8:LED.c         ****     case(G):
    9:LED.c         ****       LED_1_Write(0);
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 2
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cc51aZ2O.s 			page 2
 
 
   10:LED.c         ****       break;
@@ -107,18 +107,18 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 1
   75              		.cfi_endproc
   76              	.LFE37:
   77              		.size	LED_ON, .-LED_ON
-  78 003e C046     		.section	.text.LED_Off,"ax",%progbits
+  78 003e C046     		.section	.text.LED_OFF,"ax",%progbits
   79              		.align	2
-  80              		.global	LED_Off
+  80              		.global	LED_OFF
   81              		.code	16
   82              		.thumb_func
-  83              		.type	LED_Off, %function
-  84              	LED_Off:
+  83              		.type	LED_OFF, %function
+  84              	LED_OFF:
   85              	.LFB38:
-  21:LED.c         **** void LED_Off(int16_t color)
+  21:LED.c         **** void LED_OFF(int16_t color)
   22:LED.c         **** {
   86              		.loc 1 22 0
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 3
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cc51aZ2O.s 			page 3
 
 
   87              		.cfi_startproc
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 1
   32:LED.c         ****       break;
  124              		.loc 1 32 0
  125 0030 0120     		mov	r0, #1
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 4
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cc51aZ2O.s 			page 4
 
 
  126 0032 FFF7FEFF 		bl	LED_3_Write
@@ -195,7 +195,7 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 1
  134 003c 80BD     		pop	{r7, pc}
  135              		.cfi_endproc
  136              	.LFE38:
- 137              		.size	LED_Off, .-LED_Off
+ 137              		.size	LED_OFF, .-LED_OFF
  138 003e C046     		.section	.text.LED,"ax",%progbits
  139              		.align	2
  140              		.global	LED
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 1
   43:LED.c         ****      if(power==ON)
   44:LED.c         ****       LED_1_Write(0);
   45:LED.c         ****       else
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 5
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cc51aZ2O.s 			page 5
 
 
   46:LED.c         ****       LED_1_Write(1);
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 1
   53:LED.c         ****     case(R):
  202              		.loc 1 53 0
  203 0050 10E0     		b	.L13
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 6
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cc51aZ2O.s 			page 6
 
 
  204              	.L21:
@@ -357,8 +357,8 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 1
  248 000b 01       		.uleb128 0x1
  249 000c 0E000000 		.4byte	.LASF21
  250 0010 01       		.byte	0x1
- 251 0011 63010000 		.4byte	.LASF22
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 7
+ 251 0011 5B010000 		.4byte	.LASF22
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cc51aZ2O.s 			page 7
 
 
  252 0015 A6000000 		.4byte	.LASF23
@@ -377,7 +377,7 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 1
  265 0037 03       		.uleb128 0x3
  266 0038 01       		.byte	0x1
  267 0039 08       		.byte	0x8
- 268 003a 39010000 		.4byte	.LASF1
+ 268 003a 31010000 		.4byte	.LASF1
  269 003e 02       		.uleb128 0x2
  270 003f 9C000000 		.4byte	.LASF3
  271 0043 02       		.byte	0x2
@@ -394,7 +394,7 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 1
  282 0057 03       		.uleb128 0x3
  283 0058 04       		.byte	0x4
  284 0059 05       		.byte	0x5
- 285 005a 53010000 		.4byte	.LASF6
+ 285 005a 4B010000 		.4byte	.LASF6
  286 005e 03       		.uleb128 0x3
  287 005f 04       		.byte	0x4
  288 0060 07       		.byte	0x7
@@ -416,9 +416,9 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 1
  304 007c 07       		.byte	0x7
  305 007d A1010000 		.4byte	.LASF10
  306 0081 02       		.uleb128 0x2
- 307 0082 4C010000 		.4byte	.LASF11
+ 307 0082 44010000 		.4byte	.LASF11
  308 0086 03       		.byte	0x3
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 8
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cc51aZ2O.s 			page 8
 
 
  309 0087 14       		.byte	0x14
@@ -435,11 +435,11 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 1
  320 009e 03       		.uleb128 0x3
  321 009f 08       		.byte	0x8
  322 00a0 04       		.byte	0x4
- 323 00a1 5C010000 		.4byte	.LASF14
+ 323 00a1 54010000 		.4byte	.LASF14
  324 00a5 03       		.uleb128 0x3
  325 00a6 01       		.byte	0x1
  326 00a7 08       		.byte	0x8
- 327 00a8 47010000 		.4byte	.LASF15
+ 327 00a8 3F010000 		.4byte	.LASF15
  328 00ac 03       		.uleb128 0x3
  329 00ad 04       		.byte	0x4
  330 00ae 07       		.byte	0x7
@@ -463,7 +463,7 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 1
  348 00d5 76       		.sleb128 -10
  349 00d6 00       		.byte	0
  350 00d7 05       		.uleb128 0x5
- 351 00d8 31010000 		.4byte	.LASF18
+ 351 00d8 61010000 		.4byte	.LASF18
  352 00dc 01       		.byte	0x1
  353 00dd 15       		.byte	0x15
  354 00de 00000000 		.4byte	.LFB38
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 1
  363 00f3 8C000000 		.4byte	0x8c
  364 00f7 02       		.uleb128 0x2
  365 00f8 91       		.byte	0x91
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 9
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cc51aZ2O.s 			page 9
 
 
  366 00f9 76       		.sleb128 -10
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 1
  420 0018 3A       		.uleb128 0x3a
  421 0019 0B       		.uleb128 0xb
  422 001a 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 10
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cc51aZ2O.s 			page 10
 
 
  423 001b 0B       		.uleb128 0xb
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 1
  477 0052 00       		.byte	0
  478 0053 03       		.uleb128 0x3
  479 0054 0E       		.uleb128 0xe
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 11
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cc51aZ2O.s 			page 11
 
 
  480 0055 3A       		.uleb128 0x3a
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 1
  534 0008 00000000 		.4byte	.LFB38
  535 000c 3E000000 		.4byte	.LFE38
  536 0010 00000000 		.4byte	.LFB39
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 12
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cc51aZ2O.s 			page 12
 
 
  537 0014 7A000000 		.4byte	.LFE39
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 1
  557      7400
  558              	.LASF19:
  559 0114 636F6C6F 		.ascii	"color\000"
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 13
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cc51aZ2O.s 			page 13
 
 
  559      7200
@@ -728,30 +728,30 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 1
  561      6720756E 
  561      7369676E 
  561      65642069 
- 562              	.LASF18:
- 563 0131 4C45445F 		.ascii	"LED_Off\000"
- 563      4F666600 
- 564              	.LASF1:
- 565 0139 756E7369 		.ascii	"unsigned char\000"
- 565      676E6564 
- 565      20636861 
- 565      7200
- 566              	.LASF15:
- 567 0147 63686172 		.ascii	"char\000"
- 567      00
- 568              	.LASF11:
- 569 014c 696E7438 		.ascii	"int8_t\000"
- 569      5F7400
- 570              	.LASF6:
- 571 0153 6C6F6E67 		.ascii	"long int\000"
- 571      20696E74 
- 571      00
- 572              	.LASF14:
- 573 015c 646F7562 		.ascii	"double\000"
- 573      6C6500
- 574              	.LASF22:
- 575 0163 4C45442E 		.ascii	"LED.c\000"
- 575      6300
+ 562              	.LASF1:
+ 563 0131 756E7369 		.ascii	"unsigned char\000"
+ 563      676E6564 
+ 563      20636861 
+ 563      7200
+ 564              	.LASF15:
+ 565 013f 63686172 		.ascii	"char\000"
+ 565      00
+ 566              	.LASF11:
+ 567 0144 696E7438 		.ascii	"int8_t\000"
+ 567      5F7400
+ 568              	.LASF6:
+ 569 014b 6C6F6E67 		.ascii	"long int\000"
+ 569      20696E74 
+ 569      00
+ 570              	.LASF14:
+ 571 0154 646F7562 		.ascii	"double\000"
+ 571      6C6500
+ 572              	.LASF22:
+ 573 015b 4C45442E 		.ascii	"LED.c\000"
+ 573      6300
+ 574              	.LASF18:
+ 575 0161 4C45445F 		.ascii	"LED_OFF\000"
+ 575      4F464600 
  576              	.LASF2:
  577 0169 5F5F696E 		.ascii	"__int8_t\000"
  577      74385F74 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 1
  587      676E6564 
  587      20696E74 
  587      00
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 14
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cc51aZ2O.s 			page 14
 
 
  588              	.LASF17:

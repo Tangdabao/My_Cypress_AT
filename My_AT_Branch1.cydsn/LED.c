@@ -18,7 +18,7 @@ void LED_ON(int16_t color)
       break;
   }
 }
-void LED_Off(int16_t color)
+void LED_OFF(int16_t color)
 {
     switch (color)
   {
