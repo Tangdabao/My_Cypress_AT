@@ -1,0 +1,794 @@
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"LED.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.LED_ON,"ax",%progbits
+  18              		.align	2
+  19              		.global	LED_ON
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	LED_ON, %function
+  23              	LED_ON:
+  24              	.LFB37:
+  25              		.file 1 "LED.c"
+   1:LED.c         **** #include "led.h"
+   2:LED.c         **** 
+   3:LED.c         **** void LED_ON(int16_t color)
+   4:LED.c         **** {
+  26              		.loc 1 4 0
+  27              		.cfi_startproc
+  28 0000 80B5     		push	{r7, lr}
+  29              		.cfi_def_cfa_offset 8
+  30              		.cfi_offset 7, -8
+  31              		.cfi_offset 14, -4
+  32 0002 82B0     		sub	sp, sp, #8
+  33              		.cfi_def_cfa_offset 16
+  34 0004 00AF     		add	r7, sp, #0
+  35              		.cfi_def_cfa_register 7
+  36 0006 021C     		mov	r2, r0
+  37 0008 BB1D     		add	r3, r7, #6
+  38 000a 1A80     		strh	r2, [r3]
+   5:LED.c         ****    
+   6:LED.c         ****     switch (color)
+  39              		.loc 1 6 0
+  40 000c BB1D     		add	r3, r7, #6
+  41 000e 0022     		mov	r2, #0
+  42 0010 9B5E     		ldrsh	r3, [r3, r2]
+  43 0012 472B     		cmp	r3, #71
+  44 0014 04D0     		beq	.L3
+  45 0016 522B     		cmp	r3, #82
+  46 0018 0AD0     		beq	.L4
+  47 001a 422B     		cmp	r3, #66
+  48 001c 04D0     		beq	.L5
+   7:LED.c         ****   {
+   8:LED.c         ****     case(G):
+   9:LED.c         ****       LED_1_Write(0);
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 2
+
+
+  10:LED.c         ****       break;
+  11:LED.c         ****     case(B):
+  12:LED.c         ****       LED_2_Write(0);
+  13:LED.c         ****       break;
+  14:LED.c         ****     case(R):
+  15:LED.c         ****       LED_3_Write(0);
+  16:LED.c         ****       break;
+  17:LED.c         ****     default:
+  18:LED.c         ****       break;
+  49              		.loc 1 18 0
+  50 001e 0BE0     		b	.L1
+  51              	.L3:
+   9:LED.c         ****       break;
+  52              		.loc 1 9 0
+  53 0020 0020     		mov	r0, #0
+  54 0022 FFF7FEFF 		bl	LED_1_Write
+  10:LED.c         ****     case(B):
+  55              		.loc 1 10 0
+  56 0026 07E0     		b	.L1
+  57              	.L5:
+  12:LED.c         ****       break;
+  58              		.loc 1 12 0
+  59 0028 0020     		mov	r0, #0
+  60 002a FFF7FEFF 		bl	LED_2_Write
+  13:LED.c         ****     case(R):
+  61              		.loc 1 13 0
+  62 002e 03E0     		b	.L1
+  63              	.L4:
+  15:LED.c         ****       break;
+  64              		.loc 1 15 0
+  65 0030 0020     		mov	r0, #0
+  66 0032 FFF7FEFF 		bl	LED_3_Write
+  16:LED.c         ****     default:
+  67              		.loc 1 16 0
+  68 0036 C046     		mov	r8, r8
+  69              	.L1:
+  19:LED.c         ****   }
+  20:LED.c         **** }
+  70              		.loc 1 20 0
+  71 0038 BD46     		mov	sp, r7
+  72 003a 02B0     		add	sp, sp, #8
+  73              		@ sp needed
+  74 003c 80BD     		pop	{r7, pc}
+  75              		.cfi_endproc
+  76              	.LFE37:
+  77              		.size	LED_ON, .-LED_ON
+  78 003e C046     		.section	.text.LED_Off,"ax",%progbits
+  79              		.align	2
+  80              		.global	LED_Off
+  81              		.code	16
+  82              		.thumb_func
+  83              		.type	LED_Off, %function
+  84              	LED_Off:
+  85              	.LFB38:
+  21:LED.c         **** void LED_Off(int16_t color)
+  22:LED.c         **** {
+  86              		.loc 1 22 0
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 3
+
+
+  87              		.cfi_startproc
+  88 0000 80B5     		push	{r7, lr}
+  89              		.cfi_def_cfa_offset 8
+  90              		.cfi_offset 7, -8
+  91              		.cfi_offset 14, -4
+  92 0002 82B0     		sub	sp, sp, #8
+  93              		.cfi_def_cfa_offset 16
+  94 0004 00AF     		add	r7, sp, #0
+  95              		.cfi_def_cfa_register 7
+  96 0006 021C     		mov	r2, r0
+  97 0008 BB1D     		add	r3, r7, #6
+  98 000a 1A80     		strh	r2, [r3]
+  23:LED.c         ****     switch (color)
+  99              		.loc 1 23 0
+ 100 000c BB1D     		add	r3, r7, #6
+ 101 000e 0022     		mov	r2, #0
+ 102 0010 9B5E     		ldrsh	r3, [r3, r2]
+ 103 0012 472B     		cmp	r3, #71
+ 104 0014 04D0     		beq	.L9
+ 105 0016 522B     		cmp	r3, #82
+ 106 0018 0AD0     		beq	.L10
+ 107 001a 422B     		cmp	r3, #66
+ 108 001c 04D0     		beq	.L11
+  24:LED.c         ****   {
+  25:LED.c         ****     case(G):
+  26:LED.c         ****       LED_1_Write(1);
+  27:LED.c         ****       break;
+  28:LED.c         ****     case(B):
+  29:LED.c         ****       LED_2_Write(1);
+  30:LED.c         ****       break;
+  31:LED.c         ****     case(R):
+  32:LED.c         ****       LED_3_Write(1);
+  33:LED.c         ****       break;
+  34:LED.c         ****     default:
+  35:LED.c         ****       break;
+ 109              		.loc 1 35 0
+ 110 001e 0BE0     		b	.L7
+ 111              	.L9:
+  26:LED.c         ****       break;
+ 112              		.loc 1 26 0
+ 113 0020 0120     		mov	r0, #1
+ 114 0022 FFF7FEFF 		bl	LED_1_Write
+  27:LED.c         ****     case(B):
+ 115              		.loc 1 27 0
+ 116 0026 07E0     		b	.L7
+ 117              	.L11:
+  29:LED.c         ****       break;
+ 118              		.loc 1 29 0
+ 119 0028 0120     		mov	r0, #1
+ 120 002a FFF7FEFF 		bl	LED_2_Write
+  30:LED.c         ****     case(R):
+ 121              		.loc 1 30 0
+ 122 002e 03E0     		b	.L7
+ 123              	.L10:
+  32:LED.c         ****       break;
+ 124              		.loc 1 32 0
+ 125 0030 0120     		mov	r0, #1
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 4
+
+
+ 126 0032 FFF7FEFF 		bl	LED_3_Write
+  33:LED.c         ****     default:
+ 127              		.loc 1 33 0
+ 128 0036 C046     		mov	r8, r8
+ 129              	.L7:
+  36:LED.c         ****   }
+  37:LED.c         **** }
+ 130              		.loc 1 37 0
+ 131 0038 BD46     		mov	sp, r7
+ 132 003a 02B0     		add	sp, sp, #8
+ 133              		@ sp needed
+ 134 003c 80BD     		pop	{r7, pc}
+ 135              		.cfi_endproc
+ 136              	.LFE38:
+ 137              		.size	LED_Off, .-LED_Off
+ 138 003e C046     		.section	.text.LED,"ax",%progbits
+ 139              		.align	2
+ 140              		.global	LED
+ 141              		.code	16
+ 142              		.thumb_func
+ 143              		.type	LED, %function
+ 144              	LED:
+ 145              	.LFB39:
+  38:LED.c         **** void LED(int16_t color,int8_t power)
+  39:LED.c         **** {
+ 146              		.loc 1 39 0
+ 147              		.cfi_startproc
+ 148 0000 80B5     		push	{r7, lr}
+ 149              		.cfi_def_cfa_offset 8
+ 150              		.cfi_offset 7, -8
+ 151              		.cfi_offset 14, -4
+ 152 0002 82B0     		sub	sp, sp, #8
+ 153              		.cfi_def_cfa_offset 16
+ 154 0004 00AF     		add	r7, sp, #0
+ 155              		.cfi_def_cfa_register 7
+ 156 0006 021C     		mov	r2, r0
+ 157 0008 BB1D     		add	r3, r7, #6
+ 158 000a 1A80     		strh	r2, [r3]
+ 159 000c 7B1D     		add	r3, r7, #5
+ 160 000e 0A1C     		add	r2, r1, #0
+ 161 0010 1A70     		strb	r2, [r3]
+  40:LED.c         ****     switch (color)
+ 162              		.loc 1 40 0
+ 163 0012 BB1D     		add	r3, r7, #6
+ 164 0014 0022     		mov	r2, #0
+ 165 0016 9B5E     		ldrsh	r3, [r3, r2]
+ 166 0018 472B     		cmp	r3, #71
+ 167 001a 04D0     		beq	.L15
+ 168 001c 522B     		cmp	r3, #82
+ 169 001e 1CD0     		beq	.L16
+ 170 0020 422B     		cmp	r3, #66
+ 171 0022 0DD0     		beq	.L17
+  41:LED.c         ****   {
+  42:LED.c         ****     case(G):
+  43:LED.c         ****      if(power==ON)
+  44:LED.c         ****       LED_1_Write(0);
+  45:LED.c         ****       else
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 5
+
+
+  46:LED.c         ****       LED_1_Write(1);
+  47:LED.c         ****       break;
+  48:LED.c         ****     case(B):
+  49:LED.c         ****     if(power==ON)
+  50:LED.c         ****       LED_2_Write(0);
+  51:LED.c         ****      else  
+  52:LED.c         ****       LED_2_Write(1);
+  53:LED.c         ****       break;
+  54:LED.c         ****     case(R):
+  55:LED.c         ****     if(power==ON)
+  56:LED.c         ****       LED_3_Write(0);
+  57:LED.c         ****     else
+  58:LED.c         ****        LED_3_Write(1);
+  59:LED.c         ****       break;
+  60:LED.c         ****     
+  61:LED.c         ****     default:
+  62:LED.c         ****       break;
+ 172              		.loc 1 62 0
+ 173 0024 26E0     		b	.L13
+ 174              	.L15:
+  43:LED.c         ****       LED_1_Write(0);
+ 175              		.loc 1 43 0
+ 176 0026 7B1D     		add	r3, r7, #5
+ 177 0028 1B78     		ldrb	r3, [r3]
+ 178 002a 5BB2     		sxtb	r3, r3
+ 179 002c 002B     		cmp	r3, #0
+ 180 002e 03D1     		bne	.L18
+  44:LED.c         ****       else
+ 181              		.loc 1 44 0
+ 182 0030 0020     		mov	r0, #0
+ 183 0032 FFF7FEFF 		bl	LED_1_Write
+  47:LED.c         ****     case(B):
+ 184              		.loc 1 47 0
+ 185 0036 1DE0     		b	.L13
+ 186              	.L18:
+  46:LED.c         ****       break;
+ 187              		.loc 1 46 0
+ 188 0038 0120     		mov	r0, #1
+ 189 003a FFF7FEFF 		bl	LED_1_Write
+  47:LED.c         ****     case(B):
+ 190              		.loc 1 47 0
+ 191 003e 19E0     		b	.L13
+ 192              	.L17:
+  49:LED.c         ****       LED_2_Write(0);
+ 193              		.loc 1 49 0
+ 194 0040 7B1D     		add	r3, r7, #5
+ 195 0042 1B78     		ldrb	r3, [r3]
+ 196 0044 5BB2     		sxtb	r3, r3
+ 197 0046 002B     		cmp	r3, #0
+ 198 0048 03D1     		bne	.L21
+  50:LED.c         ****      else  
+ 199              		.loc 1 50 0
+ 200 004a 0020     		mov	r0, #0
+ 201 004c FFF7FEFF 		bl	LED_2_Write
+  53:LED.c         ****     case(R):
+ 202              		.loc 1 53 0
+ 203 0050 10E0     		b	.L13
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 6
+
+
+ 204              	.L21:
+  52:LED.c         ****       break;
+ 205              		.loc 1 52 0
+ 206 0052 0120     		mov	r0, #1
+ 207 0054 FFF7FEFF 		bl	LED_2_Write
+  53:LED.c         ****     case(R):
+ 208              		.loc 1 53 0
+ 209 0058 0CE0     		b	.L13
+ 210              	.L16:
+  55:LED.c         ****       LED_3_Write(0);
+ 211              		.loc 1 55 0
+ 212 005a 7B1D     		add	r3, r7, #5
+ 213 005c 1B78     		ldrb	r3, [r3]
+ 214 005e 5BB2     		sxtb	r3, r3
+ 215 0060 002B     		cmp	r3, #0
+ 216 0062 03D1     		bne	.L23
+  56:LED.c         ****     else
+ 217              		.loc 1 56 0
+ 218 0064 0020     		mov	r0, #0
+ 219 0066 FFF7FEFF 		bl	LED_3_Write
+  59:LED.c         ****     
+ 220              		.loc 1 59 0
+ 221 006a 02E0     		b	.L25
+ 222              	.L23:
+  58:LED.c         ****       break;
+ 223              		.loc 1 58 0
+ 224 006c 0120     		mov	r0, #1
+ 225 006e FFF7FEFF 		bl	LED_3_Write
+ 226              	.L25:
+  59:LED.c         ****     
+ 227              		.loc 1 59 0
+ 228 0072 C046     		mov	r8, r8
+ 229              	.L13:
+  63:LED.c         ****   }
+  64:LED.c         **** }...
+ 230              		.loc 1 64 0
+ 231 0074 BD46     		mov	sp, r7
+ 232 0076 02B0     		add	sp, sp, #8
+ 233              		@ sp needed
+ 234 0078 80BD     		pop	{r7, pc}
+ 235              		.cfi_endproc
+ 236              	.LFE39:
+ 237              		.size	LED, .-LED
+ 238 007a C046     		.text
+ 239              	.Letext0:
+ 240              		.file 2 "d:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+ 241              		.file 3 "d:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+ 242              		.section	.debug_info,"",%progbits
+ 243              	.Ldebug_info0:
+ 244 0000 26010000 		.4byte	0x126
+ 245 0004 0400     		.2byte	0x4
+ 246 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 247 000a 04       		.byte	0x4
+ 248 000b 01       		.uleb128 0x1
+ 249 000c 0E000000 		.4byte	.LASF21
+ 250 0010 01       		.byte	0x1
+ 251 0011 63010000 		.4byte	.LASF22
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 7
+
+
+ 252 0015 A6000000 		.4byte	.LASF23
+ 253 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 254 001d 00000000 		.4byte	0
+ 255 0021 00000000 		.4byte	.Ldebug_line0
+ 256 0025 02       		.uleb128 0x2
+ 257 0026 69010000 		.4byte	.LASF2
+ 258 002a 02       		.byte	0x2
+ 259 002b 1B       		.byte	0x1b
+ 260 002c 30000000 		.4byte	0x30
+ 261 0030 03       		.uleb128 0x3
+ 262 0031 01       		.byte	0x1
+ 263 0032 06       		.byte	0x6
+ 264 0033 85010000 		.4byte	.LASF0
+ 265 0037 03       		.uleb128 0x3
+ 266 0038 01       		.byte	0x1
+ 267 0039 08       		.byte	0x8
+ 268 003a 39010000 		.4byte	.LASF1
+ 269 003e 02       		.uleb128 0x2
+ 270 003f 9C000000 		.4byte	.LASF3
+ 271 0043 02       		.byte	0x2
+ 272 0044 29       		.byte	0x29
+ 273 0045 49000000 		.4byte	0x49
+ 274 0049 03       		.uleb128 0x3
+ 275 004a 02       		.byte	0x2
+ 276 004b 05       		.byte	0x5
+ 277 004c 97010000 		.4byte	.LASF4
+ 278 0050 03       		.uleb128 0x3
+ 279 0051 02       		.byte	0x2
+ 280 0052 07       		.byte	0x7
+ 281 0053 72010000 		.4byte	.LASF5
+ 282 0057 03       		.uleb128 0x3
+ 283 0058 04       		.byte	0x4
+ 284 0059 05       		.byte	0x5
+ 285 005a 53010000 		.4byte	.LASF6
+ 286 005e 03       		.uleb128 0x3
+ 287 005f 04       		.byte	0x4
+ 288 0060 07       		.byte	0x7
+ 289 0061 02010000 		.4byte	.LASF7
+ 290 0065 03       		.uleb128 0x3
+ 291 0066 08       		.byte	0x8
+ 292 0067 05       		.byte	0x5
+ 293 0068 00000000 		.4byte	.LASF8
+ 294 006c 03       		.uleb128 0x3
+ 295 006d 08       		.byte	0x8
+ 296 006e 07       		.byte	0x7
+ 297 006f 1A010000 		.4byte	.LASF9
+ 298 0073 04       		.uleb128 0x4
+ 299 0074 04       		.byte	0x4
+ 300 0075 05       		.byte	0x5
+ 301 0076 696E7400 		.ascii	"int\000"
+ 302 007a 03       		.uleb128 0x3
+ 303 007b 04       		.byte	0x4
+ 304 007c 07       		.byte	0x7
+ 305 007d A1010000 		.4byte	.LASF10
+ 306 0081 02       		.uleb128 0x2
+ 307 0082 4C010000 		.4byte	.LASF11
+ 308 0086 03       		.byte	0x3
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 8
+
+
+ 309 0087 14       		.byte	0x14
+ 310 0088 25000000 		.4byte	0x25
+ 311 008c 02       		.uleb128 0x2
+ 312 008d FA000000 		.4byte	.LASF12
+ 313 0091 03       		.byte	0x3
+ 314 0092 20       		.byte	0x20
+ 315 0093 3E000000 		.4byte	0x3e
+ 316 0097 03       		.uleb128 0x3
+ 317 0098 04       		.byte	0x4
+ 318 0099 04       		.byte	0x4
+ 319 009a 91010000 		.4byte	.LASF13
+ 320 009e 03       		.uleb128 0x3
+ 321 009f 08       		.byte	0x8
+ 322 00a0 04       		.byte	0x4
+ 323 00a1 5C010000 		.4byte	.LASF14
+ 324 00a5 03       		.uleb128 0x3
+ 325 00a6 01       		.byte	0x1
+ 326 00a7 08       		.byte	0x8
+ 327 00a8 47010000 		.4byte	.LASF15
+ 328 00ac 03       		.uleb128 0x3
+ 329 00ad 04       		.byte	0x4
+ 330 00ae 07       		.byte	0x7
+ 331 00af B5010000 		.4byte	.LASF16
+ 332 00b3 05       		.uleb128 0x5
+ 333 00b4 AE010000 		.4byte	.LASF17
+ 334 00b8 01       		.byte	0x1
+ 335 00b9 03       		.byte	0x3
+ 336 00ba 00000000 		.4byte	.LFB37
+ 337 00be 3E000000 		.4byte	.LFE37-.LFB37
+ 338 00c2 01       		.uleb128 0x1
+ 339 00c3 9C       		.byte	0x9c
+ 340 00c4 D7000000 		.4byte	0xd7
+ 341 00c8 06       		.uleb128 0x6
+ 342 00c9 14010000 		.4byte	.LASF19
+ 343 00cd 01       		.byte	0x1
+ 344 00ce 03       		.byte	0x3
+ 345 00cf 8C000000 		.4byte	0x8c
+ 346 00d3 02       		.uleb128 0x2
+ 347 00d4 91       		.byte	0x91
+ 348 00d5 76       		.sleb128 -10
+ 349 00d6 00       		.byte	0
+ 350 00d7 05       		.uleb128 0x5
+ 351 00d8 31010000 		.4byte	.LASF18
+ 352 00dc 01       		.byte	0x1
+ 353 00dd 15       		.byte	0x15
+ 354 00de 00000000 		.4byte	.LFB38
+ 355 00e2 3E000000 		.4byte	.LFE38-.LFB38
+ 356 00e6 01       		.uleb128 0x1
+ 357 00e7 9C       		.byte	0x9c
+ 358 00e8 FB000000 		.4byte	0xfb
+ 359 00ec 06       		.uleb128 0x6
+ 360 00ed 14010000 		.4byte	.LASF19
+ 361 00f1 01       		.byte	0x1
+ 362 00f2 15       		.byte	0x15
+ 363 00f3 8C000000 		.4byte	0x8c
+ 364 00f7 02       		.uleb128 0x2
+ 365 00f8 91       		.byte	0x91
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 9
+
+
+ 366 00f9 76       		.sleb128 -10
+ 367 00fa 00       		.byte	0
+ 368 00fb 07       		.uleb128 0x7
+ 369 00fc 4C454400 		.ascii	"LED\000"
+ 370 0100 01       		.byte	0x1
+ 371 0101 26       		.byte	0x26
+ 372 0102 00000000 		.4byte	.LFB39
+ 373 0106 7A000000 		.4byte	.LFE39-.LFB39
+ 374 010a 01       		.uleb128 0x1
+ 375 010b 9C       		.byte	0x9c
+ 376 010c 06       		.uleb128 0x6
+ 377 010d 14010000 		.4byte	.LASF19
+ 378 0111 01       		.byte	0x1
+ 379 0112 26       		.byte	0x26
+ 380 0113 8C000000 		.4byte	0x8c
+ 381 0117 02       		.uleb128 0x2
+ 382 0118 91       		.byte	0x91
+ 383 0119 76       		.sleb128 -10
+ 384 011a 06       		.uleb128 0x6
+ 385 011b BE010000 		.4byte	.LASF20
+ 386 011f 01       		.byte	0x1
+ 387 0120 26       		.byte	0x26
+ 388 0121 81000000 		.4byte	0x81
+ 389 0125 02       		.uleb128 0x2
+ 390 0126 91       		.byte	0x91
+ 391 0127 75       		.sleb128 -11
+ 392 0128 00       		.byte	0
+ 393 0129 00       		.byte	0
+ 394              		.section	.debug_abbrev,"",%progbits
+ 395              	.Ldebug_abbrev0:
+ 396 0000 01       		.uleb128 0x1
+ 397 0001 11       		.uleb128 0x11
+ 398 0002 01       		.byte	0x1
+ 399 0003 25       		.uleb128 0x25
+ 400 0004 0E       		.uleb128 0xe
+ 401 0005 13       		.uleb128 0x13
+ 402 0006 0B       		.uleb128 0xb
+ 403 0007 03       		.uleb128 0x3
+ 404 0008 0E       		.uleb128 0xe
+ 405 0009 1B       		.uleb128 0x1b
+ 406 000a 0E       		.uleb128 0xe
+ 407 000b 55       		.uleb128 0x55
+ 408 000c 17       		.uleb128 0x17
+ 409 000d 11       		.uleb128 0x11
+ 410 000e 01       		.uleb128 0x1
+ 411 000f 10       		.uleb128 0x10
+ 412 0010 17       		.uleb128 0x17
+ 413 0011 00       		.byte	0
+ 414 0012 00       		.byte	0
+ 415 0013 02       		.uleb128 0x2
+ 416 0014 16       		.uleb128 0x16
+ 417 0015 00       		.byte	0
+ 418 0016 03       		.uleb128 0x3
+ 419 0017 0E       		.uleb128 0xe
+ 420 0018 3A       		.uleb128 0x3a
+ 421 0019 0B       		.uleb128 0xb
+ 422 001a 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 10
+
+
+ 423 001b 0B       		.uleb128 0xb
+ 424 001c 49       		.uleb128 0x49
+ 425 001d 13       		.uleb128 0x13
+ 426 001e 00       		.byte	0
+ 427 001f 00       		.byte	0
+ 428 0020 03       		.uleb128 0x3
+ 429 0021 24       		.uleb128 0x24
+ 430 0022 00       		.byte	0
+ 431 0023 0B       		.uleb128 0xb
+ 432 0024 0B       		.uleb128 0xb
+ 433 0025 3E       		.uleb128 0x3e
+ 434 0026 0B       		.uleb128 0xb
+ 435 0027 03       		.uleb128 0x3
+ 436 0028 0E       		.uleb128 0xe
+ 437 0029 00       		.byte	0
+ 438 002a 00       		.byte	0
+ 439 002b 04       		.uleb128 0x4
+ 440 002c 24       		.uleb128 0x24
+ 441 002d 00       		.byte	0
+ 442 002e 0B       		.uleb128 0xb
+ 443 002f 0B       		.uleb128 0xb
+ 444 0030 3E       		.uleb128 0x3e
+ 445 0031 0B       		.uleb128 0xb
+ 446 0032 03       		.uleb128 0x3
+ 447 0033 08       		.uleb128 0x8
+ 448 0034 00       		.byte	0
+ 449 0035 00       		.byte	0
+ 450 0036 05       		.uleb128 0x5
+ 451 0037 2E       		.uleb128 0x2e
+ 452 0038 01       		.byte	0x1
+ 453 0039 3F       		.uleb128 0x3f
+ 454 003a 19       		.uleb128 0x19
+ 455 003b 03       		.uleb128 0x3
+ 456 003c 0E       		.uleb128 0xe
+ 457 003d 3A       		.uleb128 0x3a
+ 458 003e 0B       		.uleb128 0xb
+ 459 003f 3B       		.uleb128 0x3b
+ 460 0040 0B       		.uleb128 0xb
+ 461 0041 27       		.uleb128 0x27
+ 462 0042 19       		.uleb128 0x19
+ 463 0043 11       		.uleb128 0x11
+ 464 0044 01       		.uleb128 0x1
+ 465 0045 12       		.uleb128 0x12
+ 466 0046 06       		.uleb128 0x6
+ 467 0047 40       		.uleb128 0x40
+ 468 0048 18       		.uleb128 0x18
+ 469 0049 9642     		.uleb128 0x2116
+ 470 004b 19       		.uleb128 0x19
+ 471 004c 01       		.uleb128 0x1
+ 472 004d 13       		.uleb128 0x13
+ 473 004e 00       		.byte	0
+ 474 004f 00       		.byte	0
+ 475 0050 06       		.uleb128 0x6
+ 476 0051 05       		.uleb128 0x5
+ 477 0052 00       		.byte	0
+ 478 0053 03       		.uleb128 0x3
+ 479 0054 0E       		.uleb128 0xe
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 11
+
+
+ 480 0055 3A       		.uleb128 0x3a
+ 481 0056 0B       		.uleb128 0xb
+ 482 0057 3B       		.uleb128 0x3b
+ 483 0058 0B       		.uleb128 0xb
+ 484 0059 49       		.uleb128 0x49
+ 485 005a 13       		.uleb128 0x13
+ 486 005b 02       		.uleb128 0x2
+ 487 005c 18       		.uleb128 0x18
+ 488 005d 00       		.byte	0
+ 489 005e 00       		.byte	0
+ 490 005f 07       		.uleb128 0x7
+ 491 0060 2E       		.uleb128 0x2e
+ 492 0061 01       		.byte	0x1
+ 493 0062 3F       		.uleb128 0x3f
+ 494 0063 19       		.uleb128 0x19
+ 495 0064 03       		.uleb128 0x3
+ 496 0065 08       		.uleb128 0x8
+ 497 0066 3A       		.uleb128 0x3a
+ 498 0067 0B       		.uleb128 0xb
+ 499 0068 3B       		.uleb128 0x3b
+ 500 0069 0B       		.uleb128 0xb
+ 501 006a 27       		.uleb128 0x27
+ 502 006b 19       		.uleb128 0x19
+ 503 006c 11       		.uleb128 0x11
+ 504 006d 01       		.uleb128 0x1
+ 505 006e 12       		.uleb128 0x12
+ 506 006f 06       		.uleb128 0x6
+ 507 0070 40       		.uleb128 0x40
+ 508 0071 18       		.uleb128 0x18
+ 509 0072 9642     		.uleb128 0x2116
+ 510 0074 19       		.uleb128 0x19
+ 511 0075 00       		.byte	0
+ 512 0076 00       		.byte	0
+ 513 0077 00       		.byte	0
+ 514              		.section	.debug_aranges,"",%progbits
+ 515 0000 2C000000 		.4byte	0x2c
+ 516 0004 0200     		.2byte	0x2
+ 517 0006 00000000 		.4byte	.Ldebug_info0
+ 518 000a 04       		.byte	0x4
+ 519 000b 00       		.byte	0
+ 520 000c 0000     		.2byte	0
+ 521 000e 0000     		.2byte	0
+ 522 0010 00000000 		.4byte	.LFB37
+ 523 0014 3E000000 		.4byte	.LFE37-.LFB37
+ 524 0018 00000000 		.4byte	.LFB38
+ 525 001c 3E000000 		.4byte	.LFE38-.LFB38
+ 526 0020 00000000 		.4byte	.LFB39
+ 527 0024 7A000000 		.4byte	.LFE39-.LFB39
+ 528 0028 00000000 		.4byte	0
+ 529 002c 00000000 		.4byte	0
+ 530              		.section	.debug_ranges,"",%progbits
+ 531              	.Ldebug_ranges0:
+ 532 0000 00000000 		.4byte	.LFB37
+ 533 0004 3E000000 		.4byte	.LFE37
+ 534 0008 00000000 		.4byte	.LFB38
+ 535 000c 3E000000 		.4byte	.LFE38
+ 536 0010 00000000 		.4byte	.LFB39
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 12
+
+
+ 537 0014 7A000000 		.4byte	.LFE39
+ 538 0018 00000000 		.4byte	0
+ 539 001c 00000000 		.4byte	0
+ 540              		.section	.debug_line,"",%progbits
+ 541              	.Ldebug_line0:
+ 542 0000 75010000 		.section	.debug_str,"MS",%progbits,1
+ 542      02001401 
+ 542      00000201 
+ 542      FB0E0D00 
+ 542      01010101 
+ 543              	.LASF8:
+ 544 0000 6C6F6E67 		.ascii	"long long int\000"
+ 544      206C6F6E 
+ 544      6720696E 
+ 544      7400
+ 545              	.LASF21:
+ 546 000e 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 546      4320342E 
+ 546      392E3320 
+ 546      32303135 
+ 546      30333033 
+ 547 0041 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 547      20726576 
+ 547      6973696F 
+ 547      6E203232 
+ 547      31323230 
+ 548 0074 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 548      66756E63 
+ 548      74696F6E 
+ 548      2D736563 
+ 548      74696F6E 
+ 549              	.LASF3:
+ 550 009c 5F5F696E 		.ascii	"__int16_t\000"
+ 550      7431365F 
+ 550      7400
+ 551              	.LASF23:
+ 552 00a6 433A5C55 		.ascii	"C:\\Users\\Administrator\\Desktop\\Temporary Files\\"
+ 552      73657273 
+ 552      5C41646D 
+ 552      696E6973 
+ 552      74726174 
+ 553 00d5 4D795F41 		.ascii	"My_AT\\Cypress_AT\\My_AT_Branch1.cydsn\000"
+ 553      545C4379 
+ 553      70726573 
+ 553      735F4154 
+ 553      5C4D795F 
+ 554              	.LASF12:
+ 555 00fa 696E7431 		.ascii	"int16_t\000"
+ 555      365F7400 
+ 556              	.LASF7:
+ 557 0102 6C6F6E67 		.ascii	"long unsigned int\000"
+ 557      20756E73 
+ 557      69676E65 
+ 557      6420696E 
+ 557      7400
+ 558              	.LASF19:
+ 559 0114 636F6C6F 		.ascii	"color\000"
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 13
+
+
+ 559      7200
+ 560              	.LASF9:
+ 561 011a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 561      206C6F6E 
+ 561      6720756E 
+ 561      7369676E 
+ 561      65642069 
+ 562              	.LASF18:
+ 563 0131 4C45445F 		.ascii	"LED_Off\000"
+ 563      4F666600 
+ 564              	.LASF1:
+ 565 0139 756E7369 		.ascii	"unsigned char\000"
+ 565      676E6564 
+ 565      20636861 
+ 565      7200
+ 566              	.LASF15:
+ 567 0147 63686172 		.ascii	"char\000"
+ 567      00
+ 568              	.LASF11:
+ 569 014c 696E7438 		.ascii	"int8_t\000"
+ 569      5F7400
+ 570              	.LASF6:
+ 571 0153 6C6F6E67 		.ascii	"long int\000"
+ 571      20696E74 
+ 571      00
+ 572              	.LASF14:
+ 573 015c 646F7562 		.ascii	"double\000"
+ 573      6C6500
+ 574              	.LASF22:
+ 575 0163 4C45442E 		.ascii	"LED.c\000"
+ 575      6300
+ 576              	.LASF2:
+ 577 0169 5F5F696E 		.ascii	"__int8_t\000"
+ 577      74385F74 
+ 577      00
+ 578              	.LASF5:
+ 579 0172 73686F72 		.ascii	"short unsigned int\000"
+ 579      7420756E 
+ 579      7369676E 
+ 579      65642069 
+ 579      6E7400
+ 580              	.LASF0:
+ 581 0185 7369676E 		.ascii	"signed char\000"
+ 581      65642063 
+ 581      68617200 
+ 582              	.LASF13:
+ 583 0191 666C6F61 		.ascii	"float\000"
+ 583      7400
+ 584              	.LASF4:
+ 585 0197 73686F72 		.ascii	"short int\000"
+ 585      7420696E 
+ 585      7400
+ 586              	.LASF10:
+ 587 01a1 756E7369 		.ascii	"unsigned int\000"
+ 587      676E6564 
+ 587      20696E74 
+ 587      00
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvkT8h.s 			page 14
+
+
+ 588              	.LASF17:
+ 589 01ae 4C45445F 		.ascii	"LED_ON\000"
+ 589      4F4E00
+ 590              	.LASF16:
+ 591 01b5 73697A65 		.ascii	"sizetype\000"
+ 591      74797065 
+ 591      00
+ 592              	.LASF20:
+ 593 01be 706F7765 		.ascii	"power\000"
+ 593      7200
+ 594              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
