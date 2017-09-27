@@ -1,5 +1,5 @@
 # My_AT_Branch1
-# 2017-09-26 02:58:13Z
+# 2017-09-27 01:39:21Z
 
 # IO_6@[IOP=(0)][IoId=(6)] is reserved: SWDDebugEnabled
 dont_use_io iocell 0 6
@@ -24,3 +24,5 @@ set_io "LED_1(0)" iocell 3 6
 set_io "LED_2(0)" iocell 3 7
 set_location "\UART_AT:SCB_IRQ\" interrupt -1 -1 9
 set_location "\UART_AT:SCB\" m0s8scbcell -1 -1 0
+set_location "\BLE_AT:cy_m0s8_ble\" p4blecell -1 -1 0
+set_location "\BLE_AT:bless_isr\" interrupt -1 -1 12

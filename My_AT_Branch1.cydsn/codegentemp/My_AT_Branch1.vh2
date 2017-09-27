@@ -2,7 +2,7 @@
 --	Conversion of My_AT_Branch1.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Tue Sep 26 10:58:08 2017
+--	Wed Sep 27 09:39:14 2017
 --
 
 USE cypress.cypress.all;
@@ -84,6 +84,11 @@ SIGNAL tmpFB_0__LED_2_net_0 : bit;
 SIGNAL tmpIO_0__LED_2_net_0 : bit;
 TERMINAL tmpSIOVREF__LED_2_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__LED_2_net_0 : bit;
+SIGNAL \BLE_AT:Net_15\ : bit;
+SIGNAL Net_3383 : bit;
+SIGNAL \BLE_AT:Net_53\ : bit;
+SIGNAL Net_3382 : bit;
+SIGNAL \BLE_AT:Net_55\ : bit;
 BEGIN
 
 zero <=  ('0') ;
@@ -520,5 +525,23 @@ LED_2:cy_psoc3_pins_v1_10
 		out_clock_en=>tmpOE__LED_3_net_0,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__LED_2_net_0);
+\BLE_AT:cy_m0s8_ble\:cy_m0s8_ble_v1_0
+	GENERIC MAP(cy_registers=>"")
+	PORT MAP(interrupt=>\BLE_AT:Net_15\,
+		rf_ext_pa_en=>Net_3383);
+\BLE_AT:bless_isr\:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
+	PORT MAP(int_signal=>\BLE_AT:Net_15\);
+\BLE_AT:LFCLK\:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"bc99bad5-5118-4664-95e9-cfcd475c25a9/5ae6fa4d-f41a-4a35-8821-7ce70389cb0c",
+		source_clock_id=>"9A908CA6-5BB3-4db0-B098-959E5D90882B",
+		divisor=>0,
+		period=>"0",
+		is_direct=>'1',
+		is_digital=>'0')
+	PORT MAP(clock_out=>\BLE_AT:Net_53\,
+		dig_domain_out=>open);
 
 END R_T_L;

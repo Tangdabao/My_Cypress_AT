@@ -1,5 +1,5 @@
 -- Project:   My_AT_Branch1
--- Generated: 09/26/2017 10:58:13
+-- Generated: 09/27/2017 09:39:21
 -- PSoC Creator  4.0 Update 1
 
 ENTITY My_AT_Branch1 IS
@@ -39,6 +39,8 @@ ARCHITECTURE __DEFAULT__ OF My_AT_Branch1 IS
     SIGNAL Net_3366 : bit;
     SIGNAL Net_3368 : bit;
     SIGNAL Net_3369 : bit;
+    SIGNAL Net_3383 : bit;
+    SIGNAL \BLE_AT:Net_15\ : bit;
     SIGNAL \UART_AT:Net_847_ff1\ : bit;
     ATTRIBUTE global_signal OF \UART_AT:Net_847_ff1\ : SIGNAL IS true;
     SIGNAL \UART_AT:miso_s_wire\ : bit;
@@ -75,6 +77,8 @@ ARCHITECTURE __DEFAULT__ OF My_AT_Branch1 IS
     ATTRIBUTE Location OF LED_2(0) : LABEL IS "P3[7]";
     ATTRIBUTE Location OF \UART_AT:SCB_IRQ\ : LABEL IS "[IntrContainer=(0)][IntrId=(9)]";
     ATTRIBUTE Location OF \UART_AT:SCB\ : LABEL IS "F(SCB,0)";
+    ATTRIBUTE Location OF \BLE_AT:cy_m0s8_ble\ : LABEL IS "F(BLE,0)";
+    ATTRIBUTE Location OF \BLE_AT:bless_isr\ : LABEL IS "[IntrContainer=(0)][IntrId=(12)]";
     COMPONENT interrupt
         PORT (
             interrupt : IN std_ulogic;
@@ -257,6 +261,16 @@ ARCHITECTURE __DEFAULT__ OF My_AT_Branch1 IS
             sda : IN std_ulogic;
             rx_req : OUT std_ulogic;
             tx_req : OUT std_ulogic);
+    END COMPONENT;
+    COMPONENT p4blecell
+        PORT (
+            interrupt : OUT std_ulogic;
+            rfctrl_extpa_en : OUT std_ulogic;
+            wco_in : IN std_ulogic;
+            wco_out : OUT std_ulogic;
+            ext_pa_tx_ctl : OUT std_ulogic;
+            ext_lna_rx_ctl : OUT std_ulogic;
+            ext_pa_lna_chip_en : OUT std_ulogic);
     END COMPONENT;
 BEGIN
 
@@ -760,5 +774,20 @@ BEGIN
             sclk_s => open,
             tx_req => Net_3369,
             rx_req => Net_3368);
+
+    \BLE_AT:cy_m0s8_ble\:p4blecell
+        GENERIC MAP(
+            cy_registers => "")
+        PORT MAP(
+            interrupt => \BLE_AT:Net_15\,
+            rfctrl_extpa_en => Net_3383);
+
+    \BLE_AT:bless_isr\:interrupt
+        GENERIC MAP(
+            int_type => "10",
+            is_nmi => 0)
+        PORT MAP(
+            interrupt => \BLE_AT:Net_15\,
+            clock => ClockBlock_HFCLK);
 
 END __DEFAULT__;

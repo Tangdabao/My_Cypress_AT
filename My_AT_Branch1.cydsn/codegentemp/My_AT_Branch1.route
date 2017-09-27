@@ -2,6 +2,8 @@ net ClockBlock_HFCLK
 	term   ":m0s8clockblockcell.hfclk"
 	switch ":m0s8clockblockcell.hfclk==>:interrupt_9.clock"
 	term   ":interrupt_9.clock"
+	switch ":m0s8clockblockcell.hfclk==>:interrupt_12.clock"
+	term   ":interrupt_12.clock"
 end ClockBlock_HFCLK
 net Net_3366
 	term   ":m0s8scbcell_0.interrupt"
@@ -9,6 +11,12 @@ net Net_3366
 	switch ":interrupt_idmux_9.interrupt_idmux_9__out==>:interrupt_9.interrupt"
 	term   ":interrupt_9.interrupt"
 end Net_3366
+net \BLE_AT:Net_15\
+	term   ":p4blecell.interrupt"
+	switch ":p4blecell.interrupt==>:interrupt_idmux_12.in_0"
+	switch ":interrupt_idmux_12.interrupt_idmux_12__out==>:interrupt_12.interrupt"
+	term   ":interrupt_12.interrupt"
+end \BLE_AT:Net_15\
 net \UART_AT:rx_wire\
 	term   ":ioport1:pin4.fb"
 	switch ":ioport1:pin4.fb==>:ioport1:hsiom_in4.hsiom4_in"
